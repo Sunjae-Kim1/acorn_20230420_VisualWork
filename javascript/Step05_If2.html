@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_If2.html</title>
+</head>
+<body>
+    <h1> 양자 택일의 조건부 블럭 구성 </h1>
+    <p id = "one"></p>
+    <p id = "two"></p>
+    <script>
+        let isMan = confirm("성별이 남성이면 확인 , 여성이면 취소");
+
+        // 만일 남성이면 위의 p 요소에 "당신은 남성입니다!" 를 출력하고,
+        // 아닌 경우에는 p 요소에 "당신은 여성입니다!" 를 출력한다.
+        if(isMan){
+            document.querySelector("#one").innerText = "당신은 남성입니다!";
+        }
+        else {
+            document.querySelector("#one").innerText = "당신은 여성입니다!";
+        }
+
+        // 양자 택일의 간단한 로직은 3 항 연산자를 활용할 수 있다.
+        let result = isMan ? "당신은 남성입니다!" : "당신은 여성입니다!";
+        document.querySelector("#two").innerText = result;
+
+    </script>
+</body>
+</html>

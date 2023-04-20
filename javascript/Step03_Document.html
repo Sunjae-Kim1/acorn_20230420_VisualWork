@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Document.html &#9786</title>
+</head>
+<body>
+    <h1> document object 사용하기 </h1>
+    <button onclick = "change()">바꾸기 </button>
+    <p id = "one">p1</p>
+    <p class = "my-class" onmouseover="mouse()">p2</p>
+    <p class = "my-class">p3</p>
+
+    <input type = "text" id = "two">
+    <button onclick = "send()">전송 &rarr; </button>
+    <input type = "text" id = "three">
+
+    <br>
+
+    &#9786; &#9787; &#8252;  &spades; &clubs; &diams; &hearts;
+
+    <script>
+        // h1 요소의 innerText 를 특정 ( 바꾸기 ) 버튼이 눌렸을 때 바꾼다.
+
+        let change = function(){
+            document.querySelector("h1").innerText = "Hello World!";
+            document.bgColor = cyan;
+            document.fgColor = "steelblue";
+        };
+
+        // p1 에 mouseover 가 되었을 때 inneText 를 " 마우스가 올라갔네? " 로 변경한다.
+        let mouse = () => {
+            document.querySelector("p").innerText = "마우스가 올라갔네?";
+            document.bgColor = "white";
+            document.fgColor = "black";
+        };
+
+        // 1번째 방법
+        // let send = function(){
+        //     let a = document.querySelector("#two").value;
+        //     document.querySelector("#three").value = a;
+        //     document.querySelector("#two").value = ""; // 전송 후 비우기
+        // };
+
+        // 2번째 방법
+        let first = document.querySelector("#two");
+        let second = document.querySelector("#three");
+
+        let send=() => {
+            second.value = first.value;
+            first.value = "";
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Document2.html</title>
+    <style>
+        p{
+            color: blue;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color:   olive;
+            cursor: pointer;
+            transition: margin-left 0.3s ease-out;
+        }
+        .point{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> 인라인 css  테스트 </h1>
+    <p style="color :chartreuse; background-color : cornflowerblue;">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Nisi aliquid alias nulla laboriosam rem enim iusto ex numquam possimus 
+        assumenda molestiae laudantium ratione rerum, mollitia, 
+        voluptas ducimus minus sunt molestias!</p>
+
+    <p align = "center" class = "point" onclick = "unmove()">원위치 하기</p>
+
+    <div class = "box" onclick = "move()" align = "center"><br><br> 눌러봅시다. </div>
+
+    <script>
+
+        let move = () => {
+            document.querySelector(".box").style.marginLeft = "100px";
+        };
+
+        let unmove = () => {
+            document.querySelector(".box").style.marginLeft = "0px";
+        };
+    </script>
+
+</body>
+</html>

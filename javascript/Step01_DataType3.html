@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType3.html</title>
+</head>
+<body>
+    <h1> javascript 데이터 type </h1>
+    <p> <strong>object</strong> type </p>
+    <script>
+        /*
+            한 명의 회원정보를 다루고자 한다.
+            번호 , 이름 , 성별
+        */
+       
+        // 번호는 1 , 이름은 김구라 , 성별은 남자인 회원의 정보를  변수 3개에 각각 담아봅시다.
+        let num = 1;
+        let name = "김구라";
+        let isMan = true;
+
+        // 하나의 변수 명으로 여러 개의 값을 한 번에 관리
+        // {} - Object Type (number X , string X , boolean X)
+        let mem1 = {num:1 , name :"김구라" , isMan:true};
+
+        let mem2 = {
+            num:1 ,
+            name:"김구라" ,
+            isMan:true
+        };
+
+        //let b = hi;
+        // hi 라는 변수 참조 ( 없으면 에러 )
+
+        // Object 의 특정방에 넣을 데이터를 변수 명으로 불러와서 넣을 수 있다.
+        let mem3 = {num:num , name:name , isMan:isMan};
+
+        // 위를 줄엿 아래와 같이 object 를 만들 수 있다.
+        let mem4 = {num , name , isMan};
+
+        // a 는 object type
+        let a = mem1; // mem1 에 있는 object type 값을 a 에 복사
+
+        // b 는 number type
+        let b = mem1.num;
+
+        // c 는 string type
+        let c = mem1.name;
+
+        // d 는 boolean type
+        let d = mem1.isMan;
+
+        // 빈 object 를 만들고 나중에 필요에 따라서 데이터를 추가 할수 있다.
+        let mem5 = {};
+        mem5.num = 2;
+        mem5.name = "해골";
+        mem5.isMan = false;
+
+        // 이미 만들어진 object 에 저장된 값 수정하기
+        mem2.num = 3;
+        mem2.name = "원숭이";
+    </script>
+</body>
+</html>

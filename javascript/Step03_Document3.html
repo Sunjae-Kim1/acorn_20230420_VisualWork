@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Document3.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            color: darkorange;
+            background-color:   hsl(276, 100%, 25%);
+            transition:  0.5s ease-out;
+            margin-top: 200px;
+            margin-left: 200px;
+        }
+        .point{
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1> 인라인 css  테스트 </h1>
+    <p style="color :chartreuse; background-color : cornflowerblue;">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Nisi aliquid alias nulla laboriosam rem enim iusto ex numquam possimus 
+        assumenda molestiae laudantium ratione rerum, mollitia, 
+        voluptas ducimus minus sunt molestias!</p>
+
+    <button onclick = "reset()">원위치 , 원상태</button>
+    <button onclick = "bigger()">커져라</button>
+    <button onclick = "smaller()">작아져라</button>
+
+    <p class = "point" onclick = "up()" align = "center">아래로 가기</p>
+
+    <p class = "point" onclick = "down()" align = "center">위로 가기</p>
+
+    <p class = "point" onclick = "right()" align = "center">왼쪽 가기</p>
+
+    <p class = "point" onclick = "left()" align = "center">오른쪽 가기</p>
+
+    <div class = "box" style = "text-align:center">상자 </div>
+
+    <script>
+
+        // 함수 안에서 사용할 변수를 페이지 로딩 시점에 미리 초기 값을 대입해서 만든다.
+        let mLeft = 200;
+        let mTop = 200;
+        let mWidth = 100;
+        let mHeight = 100;
+
+        // 실행 할 코드를 함수 안에 준비한다.
+        let left = () => {
+            mLeft = mLeft + 100;
+            console.log(mLeft);
+
+            document.querySelector(".box").style.marginLeft = mLeft + "px";
+        };
+
+        let right = () => {
+            mLeft = mLeft - 100;
+            document.querySelector(".box").style.marginLeft = mLeft + "px";
+        };
+
+        let reset = () => {
+            mLeft = 200;
+            mTop = 200;
+            mWidth = 100;
+            mHeight = 100;
+            document.querySelector(".box").style.marginLeft = mLeft + "px";
+            document.querySelector(".box").style.marginTop = mTop + "px";
+            document.querySelector(".box").style.width = mWidth + "px";
+            document.querySelector(".box").style.height = mHeight + "px";
+        };
+
+        let up = () => {
+            mTop = mTop + 100;
+            document.querySelector(".box").style.marginTop= mTop + "px";
+        };
+
+        let down = () => {
+            mTop = mTop - 100;
+            document.querySelector(".box").style.marginTop = mTop + "px";
+        };
+
+        let bigger = () => {
+            
+            mWidth = mWidth + 100;
+            document.querySelector(".box").style.width = mWidth + "px";
+
+            mHeight = mHeight + 100;
+            document.querySelector(".box").style.height = mHeight + "px";
+        };
+
+        let smaller = () => {
+            
+            mWidth = mWidth - 100;
+            document.querySelector(".box").style.width = mWidth + "px";
+
+            mHeight = mHeight - 100;
+            document.querySelector(".box").style.height = mHeight + "px";
+        };
+    </script>
+
+</body>
+</html>
