@@ -7,10 +7,10 @@
     <title>Step07_CreateElement3.html</title>
 </head>
 <body>
-    <input type = "text" id = "inputMsg" placeholder = "메세지 입력">
-    <button id = "sendBtn">전송</button>
+    <input type="text" id="inputMsg" placeholder="메세지 입력">
+    <button id="sendBtn">전송</button>
     <h3> 전송 받은 메세지 목록 </h3>
-    <ul id = "msgList">
+    <ul id="msgList">
         <li>하나</li>
         <li>두울</li>
     </ul>
@@ -21,7 +21,7 @@
 
             let li = document.createElement("li");
 
-            li.innertext = msg;
+            li.innerText = msg;
 
             document.querySelector("#msgList").append(li);
         });
