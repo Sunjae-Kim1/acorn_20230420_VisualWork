@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Grid.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        .container{
+            border: 1px dotted red;
+        }
+        h1 , p{
+            border: 1px dotted green;
+        }
+        .row{
+            border: 1px dotted blue;
+        }
+        .col{
+            border: 1px dotted orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- container 를 만들고 -->
+    <div class = "container">
+        <h1> 반응형 Grid 만들기 </h1>
+        <!--
+            col-6 의 의미는 화면의 폭과 상관없이 항상 6/12 의 크기 50%의 width 를 갖는다는 것이다.
+            col-sm-6 의 의미는 조건부로 6/12 의 크기 50%의 width 를 갖는다는 것이다.
+            sm 은 화면의 크기가 576px 이상을 의미
+        -->
+        <div class = "row">
+            <div class = "col-sm-6">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita autem, cupiditate, dicta suscipit delectus fuga quam at maiores voluptatum, consequatur aspernatur excepturi earum quis quia commodi iusto reprehenderit explicabo? Esse?</p>
+            </div>
+            <div class = "col-sm-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aspernatur soluta nulla ipsum quis veniam quaerat. Cupiditate, explicabo eius. Ipsam temporibus non aliquid eligendi cupiditate aspernatur pariatur quaerat consequatur alias.</p>
+            </div>
+        </div>
+        <div class = "row">
+            <!--
+                화면의 폭이 768px 이상일때 25% 의 width
+                화면의 폭이 576px 이상일때 50% 의 width
+                화면의 폭이 576px 미만일때 100% 의 width ( div 는 원래 블럭요소 )
+
+                화면의 폭이 만일 768px 이상이면 576px 이상이기도 한다.
+                하지만 , width 는 md 가 우선시
+
+                - 우선 시 순위
+                sm < md < lg < xl < xxl
+            -->
+            <div class = "col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita autem, cupiditate, dicta suscipit delectus fuga quam at maiores voluptatum, consequatur aspernatur excepturi earum quis quia commodi iusto reprehenderit explicabo? Esse?</p>
+            </div>
+            <div class = "col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aspernatur soluta nulla ipsum quis veniam quaerat. Cupiditate, explicabo eius. Ipsam temporibus non aliquid eligendi cupiditate aspernatur pariatur quaerat consequatur alias.</p>
+            </div>
+            <div class = "col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aspernatur soluta nulla ipsum quis veniam quaerat. Cupiditate, explicabo eius. Ipsam temporibus non aliquid eligendi cupiditate aspernatur pariatur quaerat consequatur alias.</p>
+            </div>
+            <div class = "col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aspernatur soluta nulla ipsum quis veniam quaerat. Cupiditate, explicabo eius. Ipsam temporibus non aliquid eligendi cupiditate aspernatur pariatur quaerat consequatur alias.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

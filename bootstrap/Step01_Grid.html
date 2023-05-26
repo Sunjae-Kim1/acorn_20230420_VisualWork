@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Grid.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        .container{
+            border: 1px dotted red;
+        }
+        h1 , p{
+            border: 1px dotted green;
+        }
+        .row{
+            border: 1px dotted blue;
+        }
+        .col{
+            border: 1px dotted orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- container 를 만들고 -->
+    <div class = "container">
+        <!-- container 의 width 100% 활용을 원할 시 블럭요소를 단순히 작성 -->
+        <h1> 제목 width 100% </h1>
+        <p> p 요소 width 100% </p>
+        <!-- container width 를 50% 씩 2등분으로 사용하고 싶으면 row 를 만든다. -->
+        <div class = "row">
+            <!-- col 을 2개 배치하면 각각 50% 씩 폭을 나눠 가진다. -->
+            <div class = "col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil eum reiciendis natus animi architecto rem alias ex similique, odit qui labore ipsam vero nesciunt ea deleniti soluta! Deserunt, quisquam!</p>
+            </div>
+            <div class = "col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut repellat minus recusandae placeat maiores libero harum mollitia officia, pariatur debitis repudiandae perspiciatis excepturi rerum. Inventore eligendi pariatur repellat ducimus?</p>
+            </div>
+        </div>
+        <!-- 일정 비율만큼 나눠 가지게 하고 싶다면 폭을 12등분 중에 얼마의 크기를 가질지 숫자를 컬럼에 조합한다. -->
+        <div class = "row">
+            <!-- col 을 2개 배치하면 각각 50% 씩 폭을 나눠 가진다. -->
+            <div class = "col-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil eum reiciendis natus animi architecto rem alias ex similique, odit qui labore ipsam vero nesciunt ea deleniti soluta! Deserunt, quisquam!</p>
+            </div>
+            <div class = "col-8">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut repellat minus recusandae placeat maiores libero harum mollitia officia, pariatur debitis repudiandae perspiciatis excepturi rerum. Inventore eligendi pariatur repellat ducimus?</p>
+            </div>
+        </div>
+        <div class = "row">
+            <!-- col 을 2개 배치하면 각각 50% 씩 폭을 나눠 가진다. -->
+            <div class = "col-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil eum reiciendis natus animi architecto rem alias ex similique, odit qui labore ipsam vero nesciunt ea deleniti soluta! Deserunt, quisquam!</p>
+            </div>
+            <div class = "col-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut repellat minus recusandae placeat maiores libero harum mollitia officia, pariatur debitis repudiandae perspiciatis excepturi rerum. Inventore eligendi pariatur repellat ducimus?</p>
+            </div>
+        </div>
+        <div class = "row">
+            <!-- col 을 2개 배치하면 각각 50% 씩 폭을 나눠 가진다. -->
+            <div class = "col-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil eum reiciendis natus animi architecto rem alias ex similique, odit qui labore ipsam vero nesciunt ea deleniti soluta! Deserunt, quisquam!</p>
+            </div>
+            <!-- 남은 폭을 모두 가지기 -->
+            <div class = "col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut repellat minus recusandae placeat maiores libero harum mollitia officia, pariatur debitis repudiandae perspiciatis excepturi rerum. Inventore eligendi pariatur repellat ducimus?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
