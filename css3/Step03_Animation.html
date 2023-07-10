@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Animation.html</title>
+    <style>
+        /* #kim{
+            border: 1px solid red;
+            border-radius: 50%;
+            animation: rotateAni 3s linear;
+        } */
+
+        .round{
+            border: 1px solid red;
+            border-radius: 50%;
+        }
+
+        #kim{
+            animation: rotateAni 3s linear;
+        }
+
+        #kim2:hover{
+            animation: rotateAni 3s linear;
+        }
+
+        /* Animation KeyFrame 정의 */
+        @keyframes rotateAni{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h3> Animation 테스트 </h3>
+        <img class = "round" id = "kim" src = "images/kim1.png">
+        <img class = "round" id = "kim2" src = "images/kim1.png">
+        <img class = "round" id = "kim3" src = "images/kim1.png">
+    </div>
+    <script>
+        // #kim3 는 클릭 시 rotateAni 라는 키 프레임이 적용
+        document.querySelector("#kim3").addEventListener("click" , (e) => {
+            e.target.style.animation = "rotateAni 3s linear";
+        });
+    </script>
+</body>
+</html>
