@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step03_Animation.html</title>
+    <title>Step03_Animation2.html</title>
     <style>
         /* #kim{
             border: 1px solid red;
@@ -17,7 +17,14 @@
         }
 
         #kim{
-            animation: rotateAni 3s linear;
+            /*
+                rotateAni   -> 키 프레임 이름
+                3s          -> 애니메이션 적용시간
+                2           -> 애니메이션 반복 횟수         무한반복: infinite
+                linear      -> timig function
+                alternative -> 왕복여부                     0% => 100% => 0%
+            */
+            animation: rotateAni 3s 2 linear alternate;
         }
 
         #kim2:hover{
@@ -28,23 +35,22 @@
             animation-timing-function: linear;
         }
 
-        /*
-            rotate 클래스가 추가되는 시점에 수행
-            추가 될때마다 여러번 수행을 원하면
-            끝난 시점에 rotate 클래스를 제거하면 된다.
-        */
         .rotate{
             animation: rotateAni 3s linear;
         }
 
         /* Animation KeyFrame 정의 */
         @keyframes rotateAni{
-            from{
-                background-color: darkmagenta;
+            0%{
+                background-color: crimson;
                 transform: rotate(0deg);
             }
-            to{
-                background-color: azure;
+            50%{
+                background-color: chartreuse;
+                transform: rotate(180deg);
+            }
+            100%{
+                background-color: steelblue;
                 transform: rotate(360deg);
             }
         }
@@ -68,7 +74,7 @@
             e.target.classList.add("rotate");
         });
 
-        // Animation 이 종료 시 animationend 라는 이벤트가 발생한다.
+        // Animation 이 종료 시 animationend 랄는 이벤트가 발생한다.
         document.querySelector("#kim4").addEventListener("animationend" , (e) => {
             // rotate 클래스를 제거하면 다음 번에 다시 추가될 때 Animation 이 적용된다.
             e.target.classList.remove("rotate");
