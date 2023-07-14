@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step04_Poligon.html</title>
+    <title>Step04_Polygon.html</title>
     <style>
         .wrapper{
             perspective: 500px;
@@ -13,7 +13,7 @@
             display: flex;
             align-items: center;
         }
-        .poligon{
+        .polygon{
             width: 400px;
             height: 400px;
             margin: 0 auto;
@@ -21,7 +21,7 @@
             transform-origin: 50% 50%;
             transition: transform 1s ease-out;
         }
-        .poligon > div{
+        .polygon > div{
             border: 1px solid red;
             position: absolute;
             top: 0;
@@ -46,9 +46,9 @@
 </head>
 <body>
     <div class="container">
-        <h3>3d poligon 테스트</h3>
+        <h3>3d polygon 테스트</h3>
         <div class="wrapper">
-            <div class="poligon">
+            <div class="polygon">
 
             </div>
         </div>
@@ -85,13 +85,13 @@
         for(let i = 0; i < n; i++){
             const div = document.createElement("div");
             div.innerText = i + 1;
-            document.querySelector(".poligon").append(div);
+            document.querySelector(".polygon").append(div);
         }
 
-        document.querySelector(".poligon").style.transform = "translateZ(-" + tz + "px)";
+        document.querySelector(".polygon").style.transform = "translateZ(-" + tz + "px)";
 
 
-        const divs = document.querySelectorAll(".poligon div");
+        const divs = document.querySelectorAll(".polygon div");
 
         for(let i = 0; i < divs.length; i++){
                 let rotate = i * angle;
@@ -102,14 +102,12 @@
 
         document.querySelector("#leftBtn").addEventListener("click" , () => {
             rY -= angle;
-            document.querySelector(".poligon").style.transform = "translateZ(-" + tz + "px) rotateY(" + rY + "deg)";
+            document.querySelector(".polygon").style.transform = "translateZ(-" + tz + "px) rotateY(" + rY + "deg)";
         });
         document.querySelector("#rightBtn").addEventListener("click" , () => {
             rY += angle;
-            document.querySelector(".poligon").style.transform = `translateZ(-${tz}px) rotateY(${rY}deg)`;
+            document.querySelector(".polygon").style.transform = `translateZ(-${tz}px) rotateY(${rY}deg)`;
         });
-
-        document.querySelector("")
     </script>
 </body>
 </html>
