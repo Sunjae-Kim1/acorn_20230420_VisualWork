@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step04_Polygon3.html</title>
-    <style>
+    <title>Step04_Polygon4.html</title><style>
         /* 폭 80% 의 크기를 가지는 가운데 정렬된 container */
         .container{
             width: 80%;
@@ -67,6 +66,30 @@
         <script src="js/jquery.touchSwipe.js"></script>
     </div>
     <script>
+
+        const animalNames = [
+            '사자',
+            '호랑이',
+            '곰',
+            '기린',
+            '코끼리',
+            '원숭이',
+            '판다',
+            '코뿔소',
+            '얼룩말',
+            '침팬지',
+            '하이에나',
+            '코브라',
+            '하마',
+            '오랑우탄',
+            '악어',
+            '사슴',
+            '수달',
+            '여우',
+            '족제비',
+            '부엉이'
+        ];
+
         //n 각형의 폭을 함수에 전달하면 div 를 배치할때 rotateY 값과 translateZ 가 Object 로 리턴되는 함수 
         function getAngleNtz(n, width) {
             var angle = 360 / n;
@@ -79,7 +102,7 @@
         }
 
         // n각형
-        let n = 50;
+        let n = 10;
         
         let angle , tz;
 
@@ -88,7 +111,10 @@
         // 만들 면이 4개 이므로 반복문 4번 돌리기
         for(let i = 0; i < n; i++){
             const div = document.createElement("div");
-            div.innerText = i + 1;
+            div.innerText = animalNames[i];
+            if(i == n - 1){
+                div.innerText = animalNames[19];
+            }
             document.querySelector(".polygon").append(div);
         }
 
